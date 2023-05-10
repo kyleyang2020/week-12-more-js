@@ -9,7 +9,20 @@
 <body>
     <script>
         // an iterative example of factorial function
-        var total = 1;
+        // factorial 5! = 5x4x3x2x1
+        function factorial(n) {
+            //definition of factorial function
+            var total = 1;
+            for(i = 0; i < n; i++) {
+                total = total * (n-i);
+                // console.log("current value of total is: " + total);
+            }
+            return total;
+        }
+
+        var userstring = prompt("Number please: ");
+        var usernum = parseInt(userstring);
+        console.log(usernum + "! is " + factorial(usernum));
     </script>
 </body>
 </html>
